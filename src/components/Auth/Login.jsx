@@ -64,7 +64,7 @@ const Login = () => {
        * reset validation
        */
       useEffect(() =>{
-        console.log(location.pathname);
+        
         //check if route is /favourites
         if (location.pathname == '/Login'){
           dispatch({type: 'LOGOUT'});
@@ -89,7 +89,7 @@ const Login = () => {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            Sign in dsfggdfsgfd
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             {checkcred !== true ? (<p style={{color: "red"}}>Incorrect Credential!</p>) : (<></>)}
