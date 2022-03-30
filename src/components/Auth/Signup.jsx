@@ -64,7 +64,7 @@ const Signup = () => {
      * dispatch form to signup if no error validation and submit is true
      */
     useEffect(() =>{
-      console.log(formErrors);
+      
       if(Object.keys(formErrors).length === 0 && isSubmit){
         dispatch(signup(formData,navigate));
       }

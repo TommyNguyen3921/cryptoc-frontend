@@ -30,7 +30,7 @@ useEffect(() => { setDidMount(true) }, [])
 
 // Now that we have a variable that tells us wether or not the component has
 // mounted we can change the behavior of the other effect based on that
-console.log(fav);
+
 useEffect(() => {
   
   if (didMount){ 

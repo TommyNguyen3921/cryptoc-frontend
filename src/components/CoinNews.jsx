@@ -31,7 +31,7 @@ const CoinNews = ({Coinname}) => {
         Axios.request(options).then(function (response) {
             
             setCoinnews(response.data.value.map((news)=>[news.name,news.description,news?.image?.thumbnail?.contentUrl,news.url]));
-            console.log(response.data.value);
+            
             
           }).catch(function (error) {
             console.error(error);

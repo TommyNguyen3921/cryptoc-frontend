@@ -64,7 +64,7 @@ const Login = () => {
        * reset validation
        */
       useEffect(() =>{
-        console.log(location.pathname);
+        
         //check if route is /favourites
         if (location.pathname == '/Login'){
           dispatch({type: 'LOGOUT'});
