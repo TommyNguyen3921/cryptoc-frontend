@@ -89,7 +89,7 @@ const Login = () => {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in dsfggdfsgfd
+            Sign in 
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             {checkcred !== true ? (<p style={{color: "red"}}>Incorrect Credential!</p>) : (<></>)}
