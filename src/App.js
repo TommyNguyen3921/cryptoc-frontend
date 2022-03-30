@@ -38,7 +38,7 @@ function App() {
   //get favourite from reducer
   const posts = useSelector((state) => state.posts);
  
-  console.log(posts);
+  
   //get favourite when user is signin
   useEffect(() =>{
     if (user !== null){

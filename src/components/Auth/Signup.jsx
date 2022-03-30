@@ -9,7 +9,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Link,useNavigate} from 'react-router-dom';
+import { Link,useNavigate,useLocation} from 'react-router-dom';
 import {useDispatch} from 'react-redux';
 import {signup} from '../../actions/auth'
 import {useSelector} from 'react-redux';
@@ -26,6 +26,7 @@ const Signup = () => {
     const checksignup = useSelector((state) => state.auth);
     const [checksignupemail, Setchecksignupemail] = useState(false);
     const [load, Setload] = useState(false);
+    const location = useLocation();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -102,6 +103,18 @@ const Signup = () => {
       Setload(false);
       return errors;
     }
+
+    /**
+     * reset same email validation
+     */
+    useEffect(() =>{
+      
+      if (location.pathname == '/Login/Signup'){
+        dispatch({type: 'LOGOUT'});
+      }
+    
+    },[location])
+
   return (
     <div>
          <ThemeProvider theme={theme}>

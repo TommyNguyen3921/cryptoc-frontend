@@ -29,7 +29,7 @@ const Login = () => {
     const auth = useSelector((state) => state.auth);
     const [load, Setload] = useState(false);
 
-
+   
     const handleSubmit = (e) => {
 
       e.preventDefault();
@@ -59,6 +59,18 @@ const Login = () => {
       const handleChange = (e) =>{
         SetformData({...formData, [e.target.name]: e.target.value});
       }
+
+      /**
+       * reset validation
+       */
+      useEffect(() =>{
+        console.log(location.pathname);
+        //check if route is /favourites
+        if (location.pathname == '/Login'){
+          dispatch({type: 'LOGOUT'});
+        }
+      
+      },[location])
 
   return (
     <div>
