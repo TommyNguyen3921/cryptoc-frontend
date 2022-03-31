@@ -74,7 +74,7 @@ useEffect(() => {
         Price:{price}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-        Price:{symbol}
+        Symbol:{symbol}
         </Typography>
       </CardContent>
       <CardActions>
