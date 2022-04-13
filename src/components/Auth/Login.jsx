@@ -14,7 +14,7 @@ import {useDispatch} from 'react-redux';
 import {signin} from '../../actions/auth';
 import {useSelector} from 'react-redux';
 
-const initialState = {email: '', lastName: ''};
+const initialState = {email: 'sample@gmail.com', password: 'test123'};
 
 const Login = () => {
     const theme = createTheme();
@@ -36,6 +36,7 @@ const Login = () => {
        //show loading if submitted
        Setload(true);
        //dispatch value to server and route location
+       
        dispatch(signin(formData,navigate));
        
        
@@ -102,7 +103,7 @@ const Login = () => {
               name="email"
               autoComplete="email"
               autoFocus
-              defaultValue=""
+              defaultValue='sample@gmail.com'
               onChange={handleChange}
             />
             <TextField
@@ -114,7 +115,7 @@ const Login = () => {
               type="password"
               id="password"
               autoComplete="current-password"
-              defaultValue=""
+              defaultValue='test123'
               onChange={handleChange}
             />
         
